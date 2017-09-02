@@ -1,0 +1,9 @@
+<h2> {{name}} </h2>
+<ol>
+	<li>Metros : {{metrics}}</li>
+	<li>Vegetacion : {{veggies}}</li>
+	<li>
+		<span *ngIf="open == true">Abierto</span>
+		<span *ngIf="open != true">Cerrado</span>
+	</li>
+</ol>

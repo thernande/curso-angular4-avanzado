@@ -6,10 +6,11 @@ import { HttpModule } from '@angular/http';
 // Componentes
 import { AppComponent } from './app.component';
 import { StoreComponent } from './components/store/store.component';
+import { ParksComponent } from './parks/parks.component';
 
 @NgModule({
   declarations: [
-    AppComponent, StoreComponent
+    AppComponent, StoreComponent, ParksComponent
   ],
   imports: [
     BrowserModule,
