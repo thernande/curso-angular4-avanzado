@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parks.component.css']
 })
 export class ParksComponent implements OnInit {
-	public name: string;
-	public metrics: number;
+	@Input() name: string;
+	@Input('metros_cuadrados') metrics: number;
 	public veggies: string;
 	public open: boolean;
 

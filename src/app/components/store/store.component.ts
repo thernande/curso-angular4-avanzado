@@ -8,8 +8,14 @@ import { Component} from '@angular/core';
 
 export class StoreComponent {
 	public titulo;
+	public nombreDelParque:string;
 
 	constructor(){
 		this.titulo = "Esta es la tienda";
+		this.nombreDelParque = "National Park";
+	}
+
+	mostrarNombre(){
+		console.log(this.nombreDelParque);
 	}
 }
