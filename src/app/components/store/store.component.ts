@@ -13,7 +13,6 @@ export class StoreComponent {
 
 	constructor(){
 		this.titulo = "Esta es la tienda";
-		this.nombreDelParque = "National Park";
 	}
 
 	mostrarNombre(){
