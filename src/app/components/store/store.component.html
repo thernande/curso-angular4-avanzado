@@ -19,7 +19,20 @@ Nombre del parque:
 Resultado: {{nombreDelParque}}
 </p>
 
+<hr/>
+
+<div>
+	<h4>Datos de mi hijo hacia el padre</h4>
+	<ol *ngIf="myPark">
+		<li>{{myPark.name}}</li>
+		<li>{{myPark.metrics}}</li>
+		<li>{{myPark.veggies}}</li>
+		<li>{{myPark.open}}</li>
+	</ol>
+</div>
+<hr/>
+
 <p *ngIf="nombreDelParque">
 Hijo:
-<app-parks [name]="nombreDelParque" [metros_cuadrados]="158"></app-parks>
+<app-parks [name]="nombreDelParque" [metros_cuadrados]="158" (passTheData)="seeDataPark($event)"></app-parks>
 </p>

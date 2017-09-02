@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -11,11 +11,22 @@ export class ParksComponent implements OnInit {
 	public veggies: string;
 	public open: boolean;
 
+	@Output() passTheData = new EventEmitter();
+
   constructor() {
   		this.name = 'parque natural para caballos';
   		this.metrics = 450;
   		this.veggies = 'Alta';
   		this.open = true;
+   }
+
+   emitirEvento(){
+   		this.passTheData.emit({
+   			'name': this.name = 'parque natural para caballos',
+  			'metrics': this.metrics = 450,
+  			'veggies': this.veggies = 'Alta',
+  			'open': this.open = true
+   		});
    }
 
   ngOnInit() {
