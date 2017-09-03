@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck} from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -33,9 +33,13 @@ export class ParksComponent implements OnChanges, OnInit {
    		console.log('lo primero es lo primero');
    	}
 
+   	ngDoCheck(){
+   		console.log('el docheck se ejecuta');
+   	}
+
   	ngOnChanges(changes: SimpleChanges) {
-	//console.log(changes);
-	console.log('a habido cambios en los valores');
+		//console.log(changes);
+		console.log('a habido cambios en los valores');
   	}
 
 }
