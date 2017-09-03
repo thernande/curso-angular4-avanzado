@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, DoCheck, OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -31,6 +31,10 @@ export class ParksComponent implements OnChanges, OnInit {
 
    	ngOnInit(){
    		console.log('lo primero es lo primero');
+   	}
+
+   	ngOnDestroy(){
+   		console.log('se va a eliminar el componente');
    	}
 
    	ngDoCheck(){
