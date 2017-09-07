@@ -2,4 +2,11 @@
   {{title}}
 </h1>
 
-<store></store>
+<a [routerLink]="['/home']">Inicio</a>
+<a [routerLink]="['/animal']">Animales</a>
+<a [routerLink]="['/keeper']">Cuidadores</a>
+<a [routerLink]="['/store']">Tienda</a>
+<a [routerLink]="['/contact']">Contacto</a>
+
+<!--<store></store>-->
+<router-outlet></router-outlet>

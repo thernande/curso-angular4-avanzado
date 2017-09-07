@@ -2,22 +2,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { routing, appRoutingProviders } from './app.routing';
 
 // Componentes
 import { AppComponent } from './app.component';
 import { StoreComponent } from './components/store/store.component';
 import { ParksComponent } from './parks/parks.component';
+import { HomeComponent } from './home/home.component';
+import { AnimalsComponent } from './animals/animals.component';
+import { ContactComponent } from './contact/contact.component';
+import { KeeperComponent } from './keeper/keeper.component';
 
 @NgModule({
   declarations: [
-    AppComponent, StoreComponent, ParksComponent
+    AppComponent, 
+    StoreComponent, 
+    ParksComponent, 
+    HomeComponent, 
+    AnimalsComponent, 
+    ContactComponent, 
+    KeeperComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
