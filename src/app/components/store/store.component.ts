@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+declare var jQuery:any;
+declare var $:any;
 
 @Component({
 	selector: 'store',
@@ -6,7 +8,7 @@ import { Component} from '@angular/core';
 	styles: ['h1 {color:blue}']
 })
 
-export class StoreComponent {
+export class StoreComponent implements OnInit{
 	public titulo;
 	public nombreDelParque:string;
 	public myPark;
@@ -22,5 +24,11 @@ export class StoreComponent {
 	seeDataPark(event){
 		console.log(event);
 		this.myPark = event;
+	}
+
+	ngOnInit(){
+		$('#buttonjq').click(function(){
+			$('#textjq').removeClass('hidden').slideToggle();
+		})
 	}
 }
