@@ -6,6 +6,18 @@
 	Add our optional JavaScript plugins, jQuery, and Popper.js) near the end of your pages, right before the closing. Be sure to place jQuery and Popper.js first, as our JavaScript plugins depend on them. While we use jQuery’s slim build in our docs, the full version is also supported
 </p>
 
+<div id="caja" style="border:1px solid black; width:150px; height: 50px">
+	Add our optional JavaScript plugins, jQuery, and Popper.js) near the end of your pages,
+</div>
+
+<hr/>
+
+<simple-tiny
+  [elementId]="'my-editor-id'"
+  (onEditorKeyup)="textEditor($event)"
+  >
+</simple-tiny>
+
 <hr/>
 Padre:
 <h1>{{titulo}}</h1>

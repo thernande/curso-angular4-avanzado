@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var jQuery:any;
-declare var $:any;
+
 
 @Component({
 	selector: 'store',
@@ -26,9 +25,14 @@ export class StoreComponent implements OnInit{
 		this.myPark = event;
 	}
 
+	textEditor(content){
+		console.log(content);
+	}
+
 	ngOnInit(){
 		$('#buttonjq').click(function(){
 			$('#textjq').removeClass('hidden').slideToggle();
-		})
+		});
+		$('#caja').dotdotdot({});
 	}
 }
