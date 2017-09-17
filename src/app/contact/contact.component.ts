@@ -15,9 +15,6 @@ export class ContactComponent implements OnInit {
   	console.log('contact.component cargado!!!');
   }
 
-  saveEmail(){
-  	localStorage.setItem('emailContacto', this.emailContact);
-  	
-  }
+
 
 }

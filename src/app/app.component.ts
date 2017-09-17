@@ -9,17 +9,8 @@ export class AppComponent implements DoCheck, OnInit {
   title = 'NgZOO';
   email: string;
 
-  ngOnInit(){
-  	//this.email = localStorage.getItem('emailContacto');
-  }
+  ngOnInit(){}
 
-  ngDoCheck(){
-  	this.email = localStorage.getItem('emailContacto');
-  }
-
-  eraseEmail(){
-  	localStorage.removeItem('emailContacto');
-  	localStorage.clear();
-  	this.email = null;
-  }
+  ngDoCheck(){}
+  
 }

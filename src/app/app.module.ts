@@ -13,6 +13,12 @@ import { AnimalsComponent } from './animals/animals.component';
 import { ContactComponent } from './contact/contact.component';
 import { KeeperComponent } from './keeper/keeper.component';
 import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
+import { SaveEmailComponent } from './modulemail/save-email/save-email.component';
+import { ShowEmailComponent } from './modulemail/show-email/show-email.component';
+import { MainEmailComponent } from './modulemail/main-email/main-email.component';
+
+//Modulo
+import { ModulemailModule } from './modulemail/modulemail.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,10 @@ import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
     AnimalsComponent, 
     ContactComponent, 
     KeeperComponent,
-    SimpleTinyComponent
+    SimpleTinyComponent,
+    SaveEmailComponent,
+    ShowEmailComponent,
+    MainEmailComponent
   ],
   imports: [
     BrowserModule,
