@@ -13,12 +13,11 @@ import { AnimalsComponent } from './animals/animals.component';
 import { ContactComponent } from './contact/contact.component';
 import { KeeperComponent } from './keeper/keeper.component';
 import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
-import { SaveEmailComponent } from './modulemail/save-email/save-email.component';
-import { ShowEmailComponent } from './modulemail/show-email/show-email.component';
-import { MainEmailComponent } from './modulemail/main-email/main-email.component';
 
 //Modulo
 import { ModulemailModule } from './modulemail/modulemail.module';
+import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
@@ -29,16 +28,15 @@ import { ModulemailModule } from './modulemail/modulemail.module';
     AnimalsComponent, 
     ContactComponent, 
     KeeperComponent,
-    SimpleTinyComponent,
-    SaveEmailComponent,
-    ShowEmailComponent,
-    MainEmailComponent
+    SimpleTinyComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ModulemailModule,
+    AdminModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
