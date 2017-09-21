@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 	title = "lista";
+	numbers = new Array(10);
   constructor() { }
 
   ngOnInit() {
