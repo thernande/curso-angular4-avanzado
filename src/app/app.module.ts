@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -36,7 +38,8 @@ import { AdminModule } from './admin/admin.module';
     HttpModule,
     routing,
     ModulemailModule,
-    AdminModule
+    AdminModule,
+    BrowserAnimationsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

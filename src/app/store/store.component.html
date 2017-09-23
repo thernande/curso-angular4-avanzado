@@ -1,3 +1,10 @@
+<h3>Animaciones Angular</h3>
+<a class="active_button btn btn-success" [@point]="status" (click)="statusChange(status)"><span *ngIf="status=='inactive'">Boton Inactivo</span>
+<span *ngIf="status=='active'">Boton activo</span></a>
+
+
+<hr/>
+<h3>Animaciones CSS3</h3>
 <a class="button_transition">Transiciones</a>
 
 <div class="clearfix"></div>
