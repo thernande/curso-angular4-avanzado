@@ -15,10 +15,13 @@ import { AnimalsComponent } from './animals/animals.component';
 import { ContactComponent } from './contact/contact.component';
 import { KeeperComponent } from './keeper/keeper.component';
 import { SimpleTinyComponent } from './simple-tiny/simple-tiny.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 //Modulo
 import { ModulemailModule } from './modulemail/modulemail.module';
 import { AdminModule } from './admin/admin.module';
+
 
 
 @NgModule({
@@ -30,7 +33,9 @@ import { AdminModule } from './admin/admin.module';
     AnimalsComponent, 
     ContactComponent, 
     KeeperComponent,
-    SimpleTinyComponent
+    SimpleTinyComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
