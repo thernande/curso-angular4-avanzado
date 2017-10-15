@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import { ModulemailModule } from './modulemail/modulemail.module';
 import { AdminModule } from './admin/admin.module';
 
+//Servicios
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     BrowserAnimationsModule
   ],
-  providers: [appRoutingProviders],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

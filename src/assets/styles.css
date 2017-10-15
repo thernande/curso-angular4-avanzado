@@ -10,5 +10,83 @@
 }
 
 .navbar-nav .active{
-	border-bottom: 3px solid green ;
+	border-bottom: 3px solid green !important;
+}
+
+.navbar-default .navbar-nav > li > a{
+	border-bottom: 3px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+	border-bottom: 3px solid green;
+	transition: all 700ms;
+}
+
+.button_transition{
+	padding: 10px;
+	background: red;
+	color: white;
+	border-radius: 20px;
+	border: 2px solid black;
+	transition: border 2s, border-radius 500ms, background 5s;
+	display: block;
+	width: 100px;
+}
+
+.button_transition:hover{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #ccc;
+	border: 1px solid red;
+}
+
+.animated_box{
+	margin-top: 15px;
+	background: green;
+	border: 5px solid black;
+	width: 100px;
+	height: 100px;
+	animation-name: slide;
+	animation-duration: 10s; 
+	animation-iteration-count: infinite;
+}
+
+span.op{
+	opacity: 0.4;
+	color: red;
+	padding: 0px;
+	margin-left: 10px;
+}
+
+
+@keyframes rotation{
+	from { 
+		transform: rotate(0deg);
+	}
+	to {  
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slide{
+	0% { 
+		margin-left: 0px;
+		transform: rotate(0deg);
+	}
+	25%{
+		margin-left: 400px;
+		background: red;
+		border-radius: 35px;
+	}
+	75% {  
+		margin-left: 0px;
+		background: yellow;
+		border-radius: 0px
+	}
+	100%{
+		background: blue;
+		transform: rotate(360deg);
+	}
 }
