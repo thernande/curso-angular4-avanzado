@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<div class="col-lg-6">
+	<h1>
+  		{{title}}
+	</h1>
+
+	<div class= "alert alert-{{status}}" *ngIf="status">
+		{{message}}
+	</div>
+
+	<form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-2">
+		<div class="form-group">
+			<label>Correo Electronico</label>
+			<input type="email" #email="ngModel" [(ngModel)]="user.email" name="email" class="form-control" required />
+
+			<span class="op alert" *ngIf="!email.valid && email.touched">
+				<strong>el email es obligatorio</strong>
+			</span>
+		</div>
+
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" #pass="ngModel" [(ngModel)]="user.pass" name="pass" class="form-control" required />
+
+			<span class="op alert" *ngIf="!pass.valid && pass.touched">
+				<strong>la contraseña es obligatorio</strong>
+			</span>
+		</div>
+
+		<input type="submit" value="Ingresar" class="btn btn-success" />
+	</form>
+</div>
