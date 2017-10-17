@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit {
   	}
 
   ngOnInit() {
+  	console.log(this._userService.getIdentity());
+  	console.log(this._userService.getToken());
   }
 
   onSubmit(){
@@ -44,7 +46,9 @@ export class LoginComponent implements OnInit {
   			}
   			else{
   				//mostrar identity
-  				console.log(this.identity);
+  				this.identity.pass = "";
+
+  				localStorage.setItem('identity', JSON.stringify(this.identity));
 
   				//conseguir el token
 			  	this._userService.signup(this.user, 'true').subscribe(
@@ -56,9 +60,10 @@ export class LoginComponent implements OnInit {
 			  			}
 			  			else{
 			  				//mostrar el token
-			  				console.log(this.token);
+  							localStorage.setItem('token', this.token);
 			  				this.status = "success";
 			  				this.message = "loguin correcto";
+			  				this._router.navigate(['/home']);
 			  			}
 			  		},
 			  	

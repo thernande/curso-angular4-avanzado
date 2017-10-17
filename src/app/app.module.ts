@@ -24,6 +24,7 @@ import { AdminModule } from './admin/admin.module';
 
 //Servicios
 import { UserService } from './services/user.service';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { UserService } from './services/user.service';
     KeeperComponent,
     SimpleTinyComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
