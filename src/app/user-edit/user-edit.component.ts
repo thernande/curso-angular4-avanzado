@@ -48,14 +48,15 @@ export class UserEditComponent implements OnInit {
   				this.status = "success";
 				  this.message = "el usuario "+this.user.name+" ha sido actualizado";
   				//subida de la imagen
-
-          this._uploadService.makeFileRequest(this.url+'/upload-image-user/'+this.user._id, [], this.filesToUpload, this.token, 'image')
-            .then((result: any) => {
-              this.user.image = result.image;
-              localStorage.setItem('identity', JSON.stringify(this.user));
-              console.log(this.user);
-            }
-            );
+          if(this.filesToUpload != null){
+            this._uploadService.makeFileRequest(this.url+'/upload-image-user/'+this.user._id, [], this.filesToUpload, this.token, 'image')
+              .then((result: any) => {
+                this.user.image = result.image;
+                localStorage.setItem('identity', JSON.stringify(this.user));
+                console.log(this.user);
+              }
+              );
+          }
   			}
   		},
   		error => {
