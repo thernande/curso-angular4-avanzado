@@ -9,6 +9,6 @@ export class User{
 		public image: string
 
 	){
-		
+
 	}
 }

@@ -1,5 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import{ GLOBAL } from "./services/global";
 
 import { UserService } from './services/user.service';
 
@@ -12,15 +13,17 @@ import { UserService } from './services/user.service';
 export class AppComponent implements DoCheck, OnInit {
   title: string;
   public identity;
+  public url: string;
 
   constructor(
   	private _userService: UserService,
-  	private _route: ActivatedRoute, 
+  	private _route: ActivatedRoute,
   	private _router: Router
   ){
   	this.title = "NgZOO";
+    this.url = GLOBAL.url;
   }
- 
+
   ngOnInit(){
   	this.identity = this._userService.getIdentity();
   }
@@ -28,7 +31,7 @@ export class AppComponent implements DoCheck, OnInit {
   ngDoCheck(){
   	this.identity = this._userService.getIdentity();
   }
-  
+
   logout(){
   	localStorage.clear();
   	this.identity = null;

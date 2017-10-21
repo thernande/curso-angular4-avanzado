@@ -49,7 +49,7 @@
 	width: 100px;
 	height: 100px;
 	animation-name: slide;
-	animation-duration: 10s; 
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 }
 
@@ -58,20 +58,37 @@ span.op{
 	color: red;
 	padding: 0px;
 	margin-left: 10px;
+	cursor: default;
 }
 
+.pointer{
+	cursor: pointer;
+}
+
+.image_for_edit img{
+	width: 60px;
+}
+
+.avatar{
+	width: 30px;
+	height: 30px;
+	border-radius: 500px;
+	overflow: visible;
+	margin-top: 10px;
+	margin-right: 0px;
+}
 
 @keyframes rotation{
-	from { 
+	from {
 		transform: rotate(0deg);
 	}
-	to {  
+	to {
 		transform: rotate(360deg);
 	}
 }
 
 @keyframes slide{
-	0% { 
+	0% {
 		margin-left: 0px;
 		transform: rotate(0deg);
 	}
@@ -80,7 +97,7 @@ span.op{
 		background: red;
 		border-radius: 35px;
 	}
-	75% {  
+	75% {
 		margin-left: 0px;
 		background: yellow;
 		border-radius: 0px

@@ -1,7 +1,7 @@
 <div class="navigation col-lg-12">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			
+
 			<div class="navbar-header">
 				<a [routerLink]="['/home']" class="navbar-brand">{{title}}</a>
 			</div>
@@ -37,7 +37,7 @@
 						Contacto
 					</a>
 				</li>
-				
+
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right" *ngIf="!identity">
@@ -56,6 +56,9 @@
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right" *ngIf="identity">
+				<li  *ngIf="identity.image && identity.image != null">
+					<img class="avatar" src="{{url + '/get-image-file/' + identity.image}}" />
+				</li>
 				<li class="dropdown">
 					<a class = "dropdown-toggle" data-toggle="dropdown" href="#">
 						{{identity.name}} <span class="caret"></span>

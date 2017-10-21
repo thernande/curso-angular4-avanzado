@@ -7,7 +7,7 @@
 
 	<form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
 
-		<p>
+		<div class="form-group">
 			<label>Nombre</label>
 
 			<input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required />
@@ -15,9 +15,9 @@
 			<span class="op alert" *ngIf="!name.valid && name.touched">
 				<strong>el nombre es obligatorio</strong>
 			</span>
-		</p>
+		</div>
 
-		<p>
+		<div class="form-group">
 			<label>Apellidos</label>
 
 			<input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname"  class="form-control" required />
@@ -25,9 +25,9 @@
 			<span class="op alert" *ngIf="!surname.valid && surname.touched">
 				<strong>los apellidos son obligatorios</strong>
 			</span>
-		</p>
+		</div>
 
-		<p>
+		<div class="form-group">
 			<label>Email</label>
 
 			<input type="email" name="email" #email="ngModel" [(ngModel)]="user.email"  class="form-control" disabled />
@@ -35,7 +35,16 @@
 			<span class="op alert" *ngIf="!email.valid && email.touched">
 				<strong>el email es obligatorio</strong>
 			</span>
-		</p>
+		</div>
+
+		<div class="image_for_edit" *ngIf="user.image && user.image != null">
+			<img src="{{url + '/get-image-file/' + user.image}}" />
+		</div>
+
+		<div class="form-group">
+			<label>Subir Foto</label>
+			<input type="file" placeholder="Subir Imagen" class="btn" (change)="fileChangeEvent($event)" />
+		</div>
 
 		<input type="submit" value="{{title}}" class="btn btn-success" [disabled]="!userEditForm.form.valid" />
 	</form>
