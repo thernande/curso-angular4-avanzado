@@ -65,6 +65,12 @@
 					</a>
 
 					<ul class="dropdown-menu">
+						<li *ngIf="identity && identity.role == 'ROLE_ADMIN'">
+							<a [routerLink]="['/admin-panel']">
+								<span class="glyphicon glyphicon-tasks"></span>
+								Administracion
+							</a>
+						</li>
 						<li>
 							<a class="pointer" [routerLink]="['/my-data']">
 								<span class="glyphicon glyphicon-pencil"></span>
