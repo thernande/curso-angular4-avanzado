@@ -25,6 +25,7 @@ import { AdminModule } from './admin/admin.module';
 //Servicios
 import { UserService } from './services/user.service';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     SimpleTinyComponent,
     RegisterComponent,
     LoginComponent,
-    UserEditComponent
+    UserEditComponent,
+    AnimalDetailComponent
   ],
   imports: [
     BrowserModule,

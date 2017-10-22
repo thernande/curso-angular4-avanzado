@@ -11,18 +11,20 @@ import { KeeperComponent } from './keeper/keeper.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 
 const appRoutes: Routes = [
 	{path: '', component: HomeComponent},
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
 	{path: 'home', component: HomeComponent},
 	{path:'contact', component: ContactComponent},
-	{path:'animal', component: AnimalsComponent},
+	{path:'animals', component: AnimalsComponent},
 	{path:'keeper', component: KeeperComponent},
 	{path:'store', component: StoreComponent},
 	{path:'login', component: LoginComponent},
 	{path:'my-data', component: UserEditComponent},
 	{path:'register', component: RegisterComponent},
+	{path:'animal/:id', component: AnimalDetailComponent},
 	{path: '**', component: HomeComponent}
 ];
 
