@@ -1,2 +1,18 @@
+<div class="col-lg-12">
+	<h3>{{title}}</h3>
 
-  <h1>{{title}}</h1>
+  <div class="col-sm-3 col-md-3 thumbnail pull-left" *ngFor="let animal of animals">
+    <div class="card" >
+      <img class="op card-img-top img-responsive" src="{{url + '/get-image-file-animal/' + animal.image}}" *ngIf="animal.image">
+        <img class="op card-img-top img-responsive" src="http://via.placeholder.com/350x150" *ngIf="!animal.image">
+      <div class="card-body">
+        <h4 class="card-title">{{animal.name}}</h4>
+        <h5 class="card-text">{{animal.description}} </h5>
+        <p class="card-text"></p>
+        <a [routerLink]="['/animal', animal._id]" class="btn btn-primary">Mas Informacion</a>
+      </div>
+    </div>
+    <div class="col-lg-1">
+    </div>
+  </div>
+</div>
