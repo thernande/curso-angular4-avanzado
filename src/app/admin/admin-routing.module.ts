@@ -19,8 +19,8 @@ const adminRoutes: Routes =[
 		children: [
 			{ path: '', redirectTo: 'listado', pathMatch: 'full'},
 			{ path: 'listado', component: ListComponent },
-			{ path: 'crear', component: AddComponent },
-			{ path: 'editar', component: EditComponent }
+			{ path: 'add', component: AddComponent },
+			{ path: 'edit/:id', component: EditComponent }
 		]
 	}
 ];

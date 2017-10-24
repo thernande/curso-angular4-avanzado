@@ -1,7 +1,7 @@
 <div class="col-lg-10">
 	<h3>{{title}}</h3>
 
-	<div class= "alert alert-{{status}}" *ngIf="status">
+	<div class="alert alert-{{status}}" *ngIf="status">
 		{{message}}
 	</div>
 
@@ -29,6 +29,10 @@
 			<span class="label label-danger" *ngIf="!year.valid && year.touched">
 				<strong>el año es obligatoria</strong>
 			</span>
+		</div>
+
+		<div *ngIf="edit && animal.image">
+			<img src="{{url + '/get-image-file-animal/' + animal.image}}" class="img-responsive img-thumbnail" />
 		</div>
 
 		<div class="form-group">
