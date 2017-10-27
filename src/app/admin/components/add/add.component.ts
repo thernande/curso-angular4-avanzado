@@ -21,6 +21,7 @@ export class AddComponent implements OnInit {
   public url: string;
   public status: string;
   public message: string;
+  public edit: boolean;
 
   constructor(
     private _route: ActivatedRoute,
@@ -34,6 +35,7 @@ export class AddComponent implements OnInit {
     this.token = this._userService.getToken();
     this.url = GLOBAL.url;
     this.animal = new Animal('','','','',2017,this.identity._id);
+    this.edit = false;
   }
 
   ngOnInit() {
